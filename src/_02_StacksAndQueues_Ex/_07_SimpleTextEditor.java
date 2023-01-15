@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Scanner;
 
-public class _07_SimpleTextEditor1 {
+public class _07_SimpleTextEditor {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
