@@ -24,6 +24,8 @@ public class _03_DiagonalDifference {
 
     private static int findSecondaryDiagonalSum(int rows, int cols, int[][] matrix) {
         int sum=0;
+        // it is on the secondary diagonal if col==matrix.length-row-1
+
         for (int row = 0; row < rows; row++) {
             for (int col = cols-1; col >= 0; col--) {
                 sum+=matrix[row][col];
@@ -38,6 +40,7 @@ public class _03_DiagonalDifference {
 
     private static int findPrimaryDiagonalSum(int rows, int cols, int[][] matrix) {
         int sum = 0;
+        // it is on the primary diagonal if col==row
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < cols; col++) {
                 sum+=matrix[row][col];
