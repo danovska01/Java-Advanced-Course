@@ -31,6 +31,7 @@ public class _06_StrikingMatrixRotation1 {
                     matrix[r][c] = ' ';
                 } else {
                     matrix[r][c] = inputStrings.get(r).charAt(c);
+                    
                 }
             }
         }
