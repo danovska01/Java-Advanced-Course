@@ -11,15 +11,20 @@ public class _06_AMinerTask {
         Map<String, Integer>resources = new LinkedHashMap<>();
         while (!input.equals("stop")){
             String resource = input;
-            int quantity=Integer.parseInt(input);
+            int quantity=Integer.parseInt(scanner.nextLine());
             if(!resources.containsKey(resource)){
                 resources.put(resource, quantity);
             }
             else {
-
+            int quantityPresented= resources.get(resource);
+            int newQuantity= quantityPresented+quantity;
+            resources.put(resource, newQuantity);
             }
 
             input=scanner.nextLine();
+        }
+        for(Map.Entry<String, Integer>entry:resources.entrySet()){
+            System.out.printf("%s -> %d%n", entry.getKey(), entry.getValue());
         }
     }
 }
