@@ -32,6 +32,22 @@ public class _10_PopulationCounter {
         // the cities should be ordered by the same criterion.
         // If two countries/cities have the same population, keep them in the order in which they were entered.
 
+        // INPUT:
+        //Sofia|Bulgaria|1
+        //Veliko Tarnovo|Bulgaria|2
+        //London|UK|4
+        //Rome|Italy|3
+        //report
+
+        //OUTPUT:
+        //UK (total population: 4)
+        //=>London: 4
+        //Bulgaria (total population: 3)
+        //=>Veliko Tarnovo: 2
+        //=>Sofia: 1
+        //Italy (total population: 3)
+        //=>Rome: 3
+
         countriesLog.entrySet()
                 .stream()
                 .sorted((c1, c2) -> Long.compare(c2.getValue() //Countries should be ordered by their total population in descending order, so we sum all cities population
