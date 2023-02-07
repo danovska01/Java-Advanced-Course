@@ -12,7 +12,6 @@ public class _09_UserLogs {
 
         while (!input[0].equals("end")){
             String IP = input[0].substring(3, input[0].length());
-            //String message = input[1].substring(9, input[1].length()-1);
             String user = input[2].substring(5, input[2].length());
 
             if(!userLog.containsKey(user)){
@@ -38,6 +37,20 @@ public class _09_UserLogs {
 
             input=scanner.nextLine().split(" ");
         }
+        //For every user found, you have to display each log in the format:
+        //The IP addresses must be split with a comma, and each line of IP addresses must end with a dot.
+
+        // INPUT:
+        //IP=192.23.30.40 message='Hello&derps.' user=destroyer
+        //IP=192.23.30.41 message='Hello&yall.' user=destroyer
+        //IP=192.23.30.40 message='Hello&hi.' user=destroyer
+        //IP=192.23.30.42 message='Hello&Dudes.' user=destroyer
+        //end
+
+        //OUTPUT:
+        //destroyer:
+        //192.23.30.40 => 2, 192.23.30.41 => 1, 192.23.30.42 => 1.
+
         for (Map.Entry<String, Map<String, Integer>> user: userLog.entrySet()) {
             List<String> ipRow = new ArrayList<>();
             System.out.printf("%s:%n", user.getKey());
