@@ -14,7 +14,8 @@ public class _14_DragonArmy {
 
         for (int i = 1; i <= n; i++) {
             String[] tokens = scanner.nextLine().split(" ");
-
+            //If a stat is missing you should assign its default values. Default values are as follows:
+            // health - 250, damage - 45, and armor - 10. Missing stat will be marked by null.
             String type = tokens[0];
             String name = tokens[1];
             long damage = tokens[2].equals("null") ? 45 : Long.parseLong(tokens[2]);
