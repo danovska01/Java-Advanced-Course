@@ -18,13 +18,15 @@ public class _04_ExtractIntegers {
         while (scanner.hasNext()){
             if(scanner.hasNextInt()){
                 int myNumber = scanner.nextInt();
-                System.out.println(myNumber);
+                // System.out.println(myNumber);
                 myFileOutput.println(myNumber);
 
 
             }
             scanner.next();
         }
+        myFileOutput.close();
+
 
 
     }
