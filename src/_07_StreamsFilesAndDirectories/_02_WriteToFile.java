@@ -14,7 +14,7 @@ public class _02_WriteToFile {
         //Read the file named "input.txt" that is provided for this exercise and write all its content
         // to a file while skipping any punctuation. Skip the following symbols: ",", ".", "!", "?".
         String pathIN = "/home/kristina/IdeaProjects/Java-Advanced/src/_07_StreamsFilesAndDirectories/input.txt";
-        String pathOUT = "/home/kristina/IdeaProjects/Java-Advanced/src/_07_StreamsFilesAndDirectories/output.txt";
+        String pathOUT = "/home/kristina/IdeaProjects/Java-Advanced/src/_07_StreamsFilesAndDirectories/outputTask2.txt";
 
         Set<Character> forbiddenSymbols = new HashSet<>();
         Collections.addAll(forbiddenSymbols, '.', ',', '!', '?');
