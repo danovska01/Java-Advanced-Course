@@ -6,9 +6,9 @@ import java.util.*;
 public class _08_NestedFolders {
     public static void main(String[] args) {
 
-        File dir = new File("/home/kristina/IdeaProjects/Java-Advanced/src/_07_StreamsFilesAndDirectories/Files-and-Streams");
+        File directory = new File("/home/kristina/IdeaProjects/Java-Advanced/src/_07_StreamsFilesAndDirectories/Files-and-Streams");
         Deque<File> files = new ArrayDeque<>();
-        files.addLast(dir);
+        files.addLast(directory);
         List<String> folders = new ArrayList<>();
 
         while (! files.isEmpty()) {
