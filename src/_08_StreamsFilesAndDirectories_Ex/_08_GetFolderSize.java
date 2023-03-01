@@ -14,10 +14,9 @@ public class _08_GetFolderSize {
 
         String basePath = "/home/kristina/Desktop/java/Java Advanced/Java Advanced/9. Exercise: Streams, Files and Directories/04. Java-Advanced-Files-and-Streams-Exercises-Resources/Exercises Resources";
         Path folder = Paths.get(basePath);
+
         long size = Files.walk(folder)
                 .filter(p -> p.toFile().isFile())
-                //.filter(p -> !p.toFile().getName().equals("output.txt"))
-                //.filter(p -> !p.toFile().getName().equals("result.txt"))
                 .mapToLong(p -> p.toFile().length())
                 .sum();
 
