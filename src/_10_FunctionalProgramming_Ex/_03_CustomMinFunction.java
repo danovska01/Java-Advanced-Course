@@ -14,5 +14,6 @@ public class _03_CustomMinFunction {
         Function<List<Integer>, Integer> getMinNumber = list-> Collections.min(list);
         System.out.println(getMinNumber.apply(numbers));
 
+
     }
 }
