@@ -67,7 +67,7 @@ public class _05_FilterByAge {
     }
 
     static Predicate<Integer> createTester(String condition, Integer age) {
-        {
+
             Predicate<Integer> tester = null;
             switch (condition) {
                 case "younger":
@@ -78,6 +78,6 @@ public class _05_FilterByAge {
                     break;
             }
             return tester;
-    }
+
     }
 }
