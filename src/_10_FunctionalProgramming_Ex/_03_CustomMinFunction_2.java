@@ -14,5 +14,8 @@ public class _03_CustomMinFunction_2 {
         Consumer<List<Integer>> printMinNumber = list-> System.out.println(Collections.min(list));
         printMinNumber.accept(numbers);
 
+        // !!!! още един начин:
+        // System.out.println(Collections.min(numbers));
+
     }
 }
