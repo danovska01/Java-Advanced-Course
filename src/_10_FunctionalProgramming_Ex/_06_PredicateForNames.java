@@ -15,6 +15,10 @@ public class _06_PredicateForNames {
         int length = Integer.parseInt(scanner.nextLine());
         List<String >names = Arrays.stream(scanner.nextLine().split("\\s+")).collect(Collectors.toList());
 
+        // String [] names = ......
+        // Predicate<String>checkValidLength = name -> name.length()<=length;
+        // Arrays.stream().filter(checkValidLength).foreach(name -> System.out.println(names));
+
 
         Predicate<String>testNameLength = name -> {
             if (name.length()>length){
@@ -22,6 +26,8 @@ public class _06_PredicateForNames {
             }
             return true;
         };
+
+
 
         for (int i = 0; i < names.size(); i++) {
             String name = names.get(i);
