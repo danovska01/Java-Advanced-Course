@@ -1,14 +1,21 @@
-package _11_DefiningClasses._1_CarInfo;
+package _11_DefiningClasses._2_CarInfo;
 
 public class Car {
-    private String brand;
 
-    public Car() {
+
+    public Car(String brand) {
+        this.brand = brand;
+        this.model = "unknown";
+        this.horsePower = -1;
+    }
+
+    public Car(String brand, String model, int horsePower) {
         this.brand = brand;
         this.model = model;
         this.horsePower = horsePower;
     }
 
+    private String brand;
     private String model;
     private int horsePower;
 
