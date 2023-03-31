@@ -1,9 +1,6 @@
-package _12_DefiningClasses_Ex._2_CompanyRoster._1_OpinionPoll;
+package _12_DefiningClasses_Ex._2_CompanyRoster;
 
 public class Employee {
-    //name, salary, position, department, email, and age.
-    // The name, salary, position, and department are mandatory while the rest are optional.
-
     private String name;
     private double salary;
     private String position;
@@ -81,7 +78,6 @@ public class Employee {
     public void setAge(int age) {
         this.age = age;
     }
-
 
 
 }

@@ -8,26 +8,28 @@ public class Car {
     private Cargo cargo;
     private Tire[] tiers;
 
+
+    //"{Model} {EngineSpeed} {EnginePower} {CargoWeight} {CargoType} {Tire1Pressure} {Tire1Age}
+    // {Tire2Pressure} {Tire2Age} {Tire3Pressure} {Tire]’3Age} {Tire4Pressure} {Tire4Age}"
     public Car(String[] parameters) {
-        this.setModel(parameters[0]);
+        this.model = parameters[0]; //{Model}
         this.setEngine(parameters);
         this.setCargo(parameters);
         this.setTiers(parameters);
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
+
+
     public void setEngine(String[] parameters) {
-        int speed = Integer.parseInt(parameters[1]);
-        int power = Integer.parseInt(parameters[2]);
+        int speed = Integer.parseInt(parameters[1]); //{EngineSpeed}
+        int power = Integer.parseInt(parameters[2]); //{EnginePower}
         this.engine = new Engine(speed, power);
     }
 
     public void setCargo(String[] parameters) {
         int weight = Integer.parseInt(parameters[3]);
         String type = parameters[4];
-        this.cargo = new Cargo(weight,type);
+        this.cargo = new Cargo(weight, type);
     }
 
     public void setTiers(String[] parameters) {

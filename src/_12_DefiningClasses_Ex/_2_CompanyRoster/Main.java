@@ -1,7 +1,8 @@
-package _12_DefiningClasses_Ex._2_CompanyRoster._1_OpinionPoll;
+package _12_DefiningClasses_Ex._2_CompanyRoster;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -72,4 +73,3 @@ public class Main {
 
     }
 }
-

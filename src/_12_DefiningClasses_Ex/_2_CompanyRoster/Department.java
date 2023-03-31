@@ -1,4 +1,4 @@
-package _12_DefiningClasses_Ex._2_CompanyRoster._1_OpinionPoll;
+package _12_DefiningClasses_Ex._2_CompanyRoster;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ public class Department {
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public List<Employee> getEmployeeList() {
         return employeeList;
     }
@@ -26,9 +26,5 @@ public class Department {
     public void setEmployeeList(List<Employee> employeeList) {
         this.employeeList = employeeList;
     }
-
-
-
-
 
 }

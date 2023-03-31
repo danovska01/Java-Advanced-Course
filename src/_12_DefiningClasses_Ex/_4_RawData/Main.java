@@ -10,8 +10,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         List<Car> cars = new ArrayList<>();
-
-            getCars();
+        int carsNumber = Integer.parseInt(scanner.nextLine());
+        while (carsNumber-- > 0) {
+            String[] tokens = scanner.nextLine().split(" ");
+            cars.add(new Car(tokens));
+        }
 
             String cargoType = scanner.nextLine();
 
@@ -31,12 +34,4 @@ public class Main {
             }
 
         }
-
-    private static void getCars() {
-        int carsNumber = Integer.parseInt(scanner.nextLine());
-        while (carsNumber-- > 0) {
-            String[] tokens = scanner.nextLine().split(" ");
-            cars.add(new Car(tokens));
-        }
-    }
 }
