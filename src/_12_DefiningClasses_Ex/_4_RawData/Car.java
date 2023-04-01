@@ -27,8 +27,8 @@ public class Car {
     }
 
     public void setCargo(String[] parameters) {
-        int weight = Integer.parseInt(parameters[3]);
-        String type = parameters[4];
+        int weight = Integer.parseInt(parameters[3]); //{CargoWeight}
+        String type = parameters[4]; //{CargoType}
         this.cargo = new Cargo(weight, type);
     }
 

@@ -20,12 +20,14 @@ public class Main {
 
             switch (cargoType) {
                 case "fragile":
+                    //"fragile" print all cars whose Cargo Type is "fragile" with a tire whose pressure is  < 1
                     cars.stream()
                             .filter(car -> car.getCargoType().equals("fragile"))
                             .filter(Car::isValidTierPressure)
                             .forEach(System.out::println);
                     break;
                 case "flamable":
+                    //"flamable" print all cars whose Cargo Type is "flamable" and have Engine Power > 250.
                     cars.stream()
                             .filter(car -> car.getCargoType().equals("flamable"))
                             .filter(Car::isValidEnginePower)
