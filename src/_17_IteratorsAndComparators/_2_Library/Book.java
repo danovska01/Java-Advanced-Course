@@ -1,9 +1,9 @@
-package _17_IteratorsAndComparators._1_Book;
+package _17_IteratorsAndComparators._2_Library;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+import java.util.stream.Collectors;
 
 public class Book {
 
@@ -15,7 +15,7 @@ public class Book {
         this.title = title;
         this.year = year;
         this.setAuthors(authors);
-        // превръщаме масива, който получаваме при точките горе директно в списък
+        //this.authors= new ArrayList<>(Arrays.asList(authors)); // превръщаме масива, който получаваме при точките горе директно в списък
 
     }
 
@@ -39,12 +39,8 @@ public class Book {
         return authors;
     }
 
-    private void setAuthors(String... authors) {
-        if(authors.length == 0){
-            this.authors = new ArrayList<String>();
-        }else{
-            this.authors = new ArrayList<>(Arrays.asList(authors));
-        }
+    public void setAuthors(String... authors) {
+        this.authors = Arrays.stream(authors).collect(Collectors.toList());
     }
 
 

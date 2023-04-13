@@ -1,4 +1,5 @@
-package _17_IteratorsAndComparators._1_Book;
+package _17_IteratorsAndComparators._2_Library;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -10,15 +11,15 @@ public class Main {
         Book bookThree = new Book("The Documents in the Case", 2002);
         Book bookTwo = new Book("The Documents in the Case", 1930, "Dorothy Sayers", "Robert Eustace");
 
-        List<Book> books = new ArrayList<>();
-        books.add(bookOne);
-        books.add(bookTwo);
-        books.add(bookThree);
+        Library library = new Library(bookOne, bookTwo, bookThree);
 
-        Iterator<Book> iterator = books.iterator();
-        while(iterator.hasNext()){
-            Book next = iterator.next();
-            System.out.println(next.getTitle());
+       /* for (Book book: library) {
+            System.out.println(book.getTitle());
+        }*/
+
+        Iterator<Book> libraryIterator = library.iterator();
+        while (libraryIterator.hasNext()){
+            System.out.println(libraryIterator.next().getTitle());
         }
     }
 }
