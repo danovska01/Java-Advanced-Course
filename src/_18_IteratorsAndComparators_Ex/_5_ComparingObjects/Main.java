@@ -30,9 +30,23 @@ public class Main {
         // ->>>  "{number of equal people} {number of not equal people} {total number of people}"
         // If there are no equal people print: "No matches".
 
-        int n = Integer.parseInt(scanner.nextLine());
+        int n = Integer.parseInt(scanner.nextLine()); // търсим n-тия човек, индексът му е n-1, броим от 0
 
         Person comparePerson = listOfPeople.get(n - 1);
+
+        /* int count = 0; // брой на хората еднакви с comparePerson
+        for(Person person: listOfPeople){
+            // сравнявам comparePerson и person
+            if(comparePerson.compareTo(person)==0){
+                count++;
+            }
+        }
+        if (count<=1){ //понеже ще намери един еднакъв, като го сравним със себе си; взимаме даден човек от списъка и го сравняваме със всички в списъка, вкл. и с него
+            System.out.println("No matches");
+        }
+        else {
+            System.out.printf("%d %d %d", count, listOfPeople.size()-count, listOfPeople.size());
+        }*/
 
         int equalPeople = (int) listOfPeople.stream()
                 .filter(p -> p.compareTo(comparePerson) == 0)
