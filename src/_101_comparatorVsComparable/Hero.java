@@ -1,4 +1,4 @@
-package comparatorVsComparable;
+package _101_comparatorVsComparable;
 
 public class Hero implements Comparable <Hero>{
     private String name;
