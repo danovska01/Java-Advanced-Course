@@ -1,4 +1,4 @@
-package Exam_Prep_Ex;
+package _20_Exam_Prep_Ex;
 
 import java.util.ArrayDeque;
 import java.util.Scanner;

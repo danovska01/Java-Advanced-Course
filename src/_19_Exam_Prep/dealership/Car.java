@@ -1,4 +1,4 @@
-package Exam_Prep.dealership;
+package _19_Exam_Prep.dealership;
 
 public class Car {
     public String manufacturer;

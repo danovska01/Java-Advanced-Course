@@ -1,4 +1,4 @@
-package _100_iterableAndItarator;
+package _100_iterableAndItarator_TEST;
 
 import java.util.ArrayList;
 import java.util.Iterator;
