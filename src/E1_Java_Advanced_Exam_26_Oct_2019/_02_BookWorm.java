@@ -1,8 +1,6 @@
-package _EXAM1_Java_Advanced_Exam_26_Oct_2019;
+package E1_Java_Advanced_Exam_26_Oct_2019;
 
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class _02_BookWorm {
     public static void main(String[] args) {

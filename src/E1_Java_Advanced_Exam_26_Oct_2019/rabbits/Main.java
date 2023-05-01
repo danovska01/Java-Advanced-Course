@@ -1,4 +1,4 @@
-package rabbits;
+package E1_Java_Advanced_Exam_26_Oct_2019.rabbits;
 
 import java.util.List;
 

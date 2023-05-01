@@ -1,4 +1,4 @@
-package _EXAM1_Java_Advanced_Exam_26_Oct_2019;
+package E1_Java_Advanced_Exam_26_Oct_2019;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
