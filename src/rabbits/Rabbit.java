@@ -2,7 +2,6 @@ package rabbits;
 
 public class Rabbit {
 
-
     private String name;
     private String species;
     private boolean available;
@@ -21,24 +20,16 @@ public class Rabbit {
         return species;
     }
 
-    public void setSpecies(String species) {
-        this.species = species;
-    }
-
     public boolean isAvailable() {
         return available;
     }
 
-    public void setAvailable(boolean available) {
-        this.available = available;
+    public void setAvailable() {
+        this.available = false;
     }
- @Override
- //"Rabbit ({species}): {name}"
- public String toString() {
-     StringBuilder sb = new StringBuilder();
-     sb.append("Rabbit ").append(this.species).append(": ").append(this.name).append(System.lineSeparator());
-     return sb.toString();
- }
 
-
+    @Override
+    public String toString() {
+        return String.format("Rabbit (%s): %s", species, name);
+    }
 }

@@ -1,5 +1,7 @@
 package rabbits;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         //Initialize the repository (Cage)
@@ -29,7 +31,7 @@ public class Main {
 //Sell Rabbit by name
         System.out.println(cage.sellRabbit("Bunny")); //Rabbit (Brazilian): Bunny
 //Sell Rabbit by species
-        List<Rabbit> soldSpecies = cage.sellRabbitBySpecies(("Cashmere Lop");
+        List<Rabbit> soldSpecies = cage.sellRabbitBySpecies(("Cashmere Lop"));
 
         soldSpecies.forEach(f-> {
             System.out.println(f.getName());
