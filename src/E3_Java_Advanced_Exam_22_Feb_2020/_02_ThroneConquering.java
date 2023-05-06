@@ -1,113 +1,133 @@
 package E3_Java_Advanced_Exam_22_Feb_2020;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class _02_ThroneConquering {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int energyOfParis = Integer.parseInt(scanner.nextLine());
-        int size = Integer.parseInt(scanner.nextLine());
+        int energy = Integer.parseInt(scanner.nextLine());
+        int rows = Integer.parseInt(scanner.nextLine());
 
-        String[][] playField = new String[size][size];
+        char[][] matrix = new char[rows][];
+        int pRow = 0;
+        int pCol = 0;
+        boolean helenIsHere = false;
 
-        int playerRow = -1;
-        int playerCol = -1;
+        for (int i = 0; i < rows; i++) {
+            char[] array = scanner.nextLine().toCharArray();
+            matrix[i] = array;
+        }
 
-        int helenRow = -1;
-        int helenCol = -1;
-
-        for (int row = 0; row < size; row++) {
-            String[] arr = scanner.nextLine().split("");
-            for (int col = 0; col < size; col++) {
-                playField[row][col] = arr[col];
-
-                if (playField[row][col].equals("P")) {
-                    playerRow = row;
-                    playerCol = col;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                char currentChar = matrix[i][j];
+                if (currentChar == 'P') {
+                    pRow = i;
+                    pCol = j;
                 }
-
-                if (playField[row][col].equals("H")) {
-                    helenRow = row;
-                    helenCol = col;
-                }
-
             }
         }
 
-        while (energyOfParis>0){
-            String [] input = scanner.nextLine().split(" ");
-            String direction= input[0];
-            int spartanRow= Integer.parseInt(input[1]);
-            int spartanCol= Integer.parseInt(input[2]);
-            if(Objects.equals(playField[spartanRow][spartanCol], "P")){
-                playField[spartanRow][spartanCol] = "X";
-            }
-            playField[spartanRow][spartanCol]="S";
+        while (energy > 0) {
+            String[] input = scanner.nextLine().split("\\s+");
+            String direction = input[0];
+            int sRow = Integer.parseInt(input[1]);
+            int sCol = Integer.parseInt(input[2]);
 
-            int oldRow = playerRow;
-            int oldCol = playerCol;
+            matrix[sRow][sCol] = 'S';
+            energy--;
 
-            energyOfParis--;
-
-            if (direction.equals("left")) {
-                playerCol--;
-            } else if (direction.equals("right")) {
-                playerCol++;
-            } else if (direction.equals("up")) {
-                playerRow--;
-            } else if (direction.equals("down")) {
-                playerRow++;
-            }
-            // If Paris tries to move outside of the field, he doesn’t move but still has his energy decreased.
-            if (playerCol < 0 || playerCol >= size || playerRow < 0 || playerRow >= size) {
-                playerRow=oldRow;
-                playerCol=oldCol;
-                playField[playerRow][playerCol]="P";
-            }
-
-            //If an enemy is in the same cell where Paris moves, Paris fights him, which decreases his energy by 2.
-            if (playerRow==spartanRow && playerCol==spartanCol){
-                energyOfParis-=2;
-                if(energyOfParis<=0){
-                    playField[spartanRow][spartanCol]="X";//If Paris’ energy drops at 0 or below, he dies and you should mark his position with ‘X’.
-                    playField[oldRow][oldCol]="-";//If Paris’ energy drops at 0 or below, he dies and you should mark his position with ‘X’.
+            switch (direction) {
+                case "up":
+                    if (pRow - 1 != -1) {
+                        matrix[pRow][pCol] = '-';
+                        pRow--;
+                        if (matrix[pRow][pCol] == 'S') {
+                            energy -= 2;
+                            if (energy <= 0) {
+                                matrix[pRow][pCol] = 'X';
+                            } else {
+                                matrix[pRow][pCol] = '-';
+                            }
+                        }
+                        if (matrix[pRow][pCol] == 'H') {
+                            helenIsHere = true;
+                            matrix[pRow][pCol] = '-';
+                            break;
+                        }
+                    }
                     break;
-                }
-                else {
-                    playField[spartanRow][spartanCol]="-";
-                    playField[playerRow][playerCol]="-";
-                }
-            }
-            if (playerRow==helenRow && playerCol==helenCol){
-                    playField[playerRow][playerCol]="-";
-                    playField[oldRow][oldCol]="-";
+                case "down":
+                    if (pRow + 1 < matrix.length) {
+                        matrix[pRow][pCol] = '-';
+                        pRow++;
+                        if (matrix[pRow][pCol] == 'S') {
+                            energy -= 2;
+                            if (energy <= 0) {
+                                matrix[pRow][pCol] = 'X';
+                            } else {
+                                matrix[pRow][pCol] = '-';
+                            }
+                        }
+                        if (matrix[pRow][pCol] == 'H') {
+                            helenIsHere = true;
+                            matrix[pRow][pCol] = '-';
+                            break;
+                        }
+                    }
                     break;
-
+                case "left":
+                    if (pCol - 1 >= 0) {
+                        matrix[pRow][pCol] = '-';
+                        pCol--;
+                        if (matrix[pRow][pCol] == 'S') {
+                            energy -= 2;
+                            if (energy <= 0) {
+                                matrix[pRow][pCol] = 'X';
+                            } else {
+                                matrix[pRow][pCol] = '-';
+                            }
+                        }
+                        if (matrix[pRow][pCol] == 'H') {
+                            helenIsHere = true;
+                            matrix[pRow][pCol] = '-';
+                            break;
+                        }
+                    }
+                    break;
+                case "right":
+                    if (pCol + 1 < matrix[pRow].length) {
+                        matrix[pRow][pCol] = '-';
+                        pCol++;
+                        if (matrix[pRow][pCol] == 'S') {
+                            energy -= 2;
+                            if (energy <= 0) {
+                                matrix[pRow][pCol] = 'X';
+                            } else {
+                                matrix[pRow][pCol] = '-';
+                            }
+                        }
+                        if (matrix[pRow][pCol] == 'H') {
+                            helenIsHere = true;
+                            matrix[pRow][pCol] = '-';
+                            break;
+                        }
+                    }
+                    break;
             }
-            else {
-                playField[oldRow][oldCol] = "-";
-                playField[playerRow][playerCol] = "P";
-            }
-
-
+            if (helenIsHere) {break;}
+            if (energy <= 0) {matrix[pRow][pCol] = 'X';}
         }
-        if (energyOfParis<=0){
-            playField[playerRow][playerCol] = "X";
-            System.out.printf("Paris died at %d;%d.%n", playerRow, playerCol);
-        }
-        if(playerRow==helenRow && playerCol==helenCol){
-            System.out.printf("Paris has successfully abducted Helen! Energy left: %d%n", energyOfParis);
 
-        }
-        for (int row = 0; row < size; row++) {
-            for (int col = 0; col < size; col++) {
-                System.out.print(playField[row][col]);
+        if (helenIsHere) {System.out.println("Paris has successfully abducted Helen! Energy left: " + energy);
+        } else {System.out.printf("Paris died at %d;%d.%n", pRow, pCol);}
+
+        for (char[] chars : matrix) {
+            for (char aChar : chars) {
+                System.out.print(aChar);
             }
             System.out.println();
         }
-
-
     }
 }
