@@ -46,11 +46,40 @@ public class Aquarium {
             fishInPool.add(fish);
         }
     }
+    public boolean remove (String name){
 
+        for(Fish f : fishInPool){
+            if(f.getName().equals(name)){
+               fishInPool.remove(f);
+               return true;
+            }
+        }
+        return false;
+    }
 
+    public Fish findFish (String name){
+        Fish fish = null;
 
+        for(Fish f : fishInPool){
+            if(f.getName().equals(name)){
 
+                fish= f;
+            }
+        }
+        return fish;
+    }
 
+    public String report (){
+        StringBuilder sb = new StringBuilder();
+        //"Aquarium: {name} ^ Size: {size}
+        //{Fish1}
+        //{Fish2}
+        sb.append(String.format("Aquarium: %s ^ Size: %d%n", name, fishInPool.size() ));
+        for(Fish f : fishInPool){
+            sb.append(f.toString());
+        }
+        return sb.toString();
 
+    }
 
 }

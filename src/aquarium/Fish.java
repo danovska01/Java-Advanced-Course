@@ -26,7 +26,7 @@ public class Fish {
 
     @Override
     public String toString (){
-        return String.format("Fish: %s%nColor: %s%nNumber of fins: %d%n", name, color, fins);
+        return String.format("Fish: %s%nColor: %s%nNumber of fins: %d", name, color, fins);
     }
 
 

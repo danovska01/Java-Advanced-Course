@@ -17,7 +17,7 @@ public class Main {
         aquarium.add(fish);
 
         // Find Fish
-      /*  aquarium.findFish("Goldy");
+        aquarium.findFish("Goldy");
 
         // Get Fish in Pool
         aquarium.getFishInPool();
@@ -42,6 +42,6 @@ public class Main {
         //Number of fins: 2
         //Fish: Nemo
         //Color: orange
-        //Number of fins: 5*/
+        //Number of fins: 5
     }
 }
