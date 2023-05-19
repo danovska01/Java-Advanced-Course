@@ -11,7 +11,6 @@ public class Fish {
         this.fins = fins;
     }
 
-
     public String getName() {
         return name;
     }
@@ -25,13 +24,7 @@ public class Fish {
     }
 
     @Override
-    public String toString (){
-        return String.format("Fish: %s%nColor: %s%nNumber of fins: %d", name, color, fins);
+    public String toString() {
+        return String.format("Fish: %s\nColor: %s\nNumber of fins: %d", name, color, fins);
     }
-
-
-
-
-
-
 }

@@ -1,4 +1,4 @@
-package E2_Java_Advanced_Exam_23_October_2021;
+package E11_Java_Advanced_Exam_23_October_2021;
 
 import java.util.ArrayDeque;
 import java.util.HashMap;

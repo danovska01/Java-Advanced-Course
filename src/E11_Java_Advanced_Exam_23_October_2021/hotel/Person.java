@@ -1,4 +1,4 @@
-package E2_Java_Advanced_Exam_23_October_2021.hotel;
+package E11_Java_Advanced_Exam_23_October_2021.hotel;
 
 public class Person {
     private String name;

@@ -1,4 +1,4 @@
-package E3_Java_Advanced_Exam_22_Feb_2020;
+package E12_Java_Advanced_Exam_15_Dec_2021;
 
 import java.util.Scanner;
 
