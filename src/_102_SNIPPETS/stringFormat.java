@@ -15,5 +15,9 @@ public class stringFormat {
         System.out.printf("%04d",x);
         System.out.println();
         System.out.printf("04%d",x);
+        System.out.println();
+
+        double y = x*1.0;
+        System.out.printf("%.2f", y);
     }
 }
