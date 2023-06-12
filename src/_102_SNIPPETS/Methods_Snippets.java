@@ -2,7 +2,7 @@ package _102_SNIPPETS;
 
 import java.util.Arrays;
 
-public class methodsSnippets {
+public class Methods_Snippets {
     public static void main(String[] args) {
         int x = 3;
         System.out.println("Преди метода x= " +  x);

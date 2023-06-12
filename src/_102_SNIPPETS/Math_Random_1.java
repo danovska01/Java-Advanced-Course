@@ -1,6 +1,6 @@
 package _102_SNIPPETS;
 
-public class mathRandom1 {
+public class Math_Random_1 {
     public static void main(String[] args) {
         //Method returns a pseudorandom double type number greater than or equal to 0.0 and less than 1.0
         // Generate random number

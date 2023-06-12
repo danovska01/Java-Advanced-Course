@@ -1,6 +1,6 @@
 package _102_SNIPPETS;
 
-public class mathRandom2 {
+public class Math_Random_2 {
     public static void main(String[] args) {
 
         // Math.random() returns a random number between 0.0-0.99.

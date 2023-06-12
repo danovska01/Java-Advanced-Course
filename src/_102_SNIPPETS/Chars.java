@@ -1,6 +1,6 @@
 package _102_SNIPPETS;
 
-public class chars {
+public class Chars {
     public static void main(String[] args) {
 
         System.out.println("num is: ");

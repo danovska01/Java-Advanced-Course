@@ -1,6 +1,6 @@
 package _102_SNIPPETS;
 
-public class stringToCharArray {
+public class String_To_CharArray {
     public static void main(String[] args) {
         String text = "Hey there";
         // Convert string to char array

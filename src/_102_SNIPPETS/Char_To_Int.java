@@ -1,6 +1,6 @@
 package _102_SNIPPETS;
 
-public class charToInt {
+public class Char_To_Int {
     public static void main(String[] args) {
         char variable1 = 'c'; // ascii number = 99
         System.out.println((int)variable1);

@@ -1,6 +1,6 @@
 package _102_SNIPPETS;
 
-public class intToChar {
+public class Int_To_Char {
     public static void main(String[] args) {
 
         //As parameter, you will need to pass, first the number to convert,

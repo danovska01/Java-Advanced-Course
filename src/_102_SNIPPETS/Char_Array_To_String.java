@@ -1,6 +1,6 @@
 package _102_SNIPPETS;
 
-public class charArrayToString {
+public class Char_Array_To_String {
     public static void main(String[] args) {
         char[] array = {'c','o','d','i','n','g'};
         String text = new String(array);

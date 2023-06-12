@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-public class mathRandom3 {
+public class Math_Random_3 {
     public static void main(String[] args) {
 
         Random random = new Random();

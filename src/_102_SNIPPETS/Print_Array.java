@@ -2,7 +2,7 @@ package _102_SNIPPETS;
 
 import java.util.stream.Stream;
 
-public class printArray {
+public class Print_Array {
 
         public static void main(String[] args) {
             String[] array = {"something","fresh","hi"};

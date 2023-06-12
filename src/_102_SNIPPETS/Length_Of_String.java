@@ -1,6 +1,6 @@
 package _102_SNIPPETS;
 
-public class lengthOfString {
+public class Length_Of_String {
     public static void main(String[] args) {
         String text = "hey there";
         int length = text.length();

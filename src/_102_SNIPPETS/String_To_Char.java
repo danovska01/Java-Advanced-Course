@@ -1,6 +1,6 @@
 package _102_SNIPPETS;
 
-public class stringToChar {
+public class String_To_Char {
     public static void main(String[] args) {
         char variable = "c".charAt(0);
         System.out.println(variable);

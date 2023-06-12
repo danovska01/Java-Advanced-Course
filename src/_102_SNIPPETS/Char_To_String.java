@@ -1,6 +1,6 @@
 package _102_SNIPPETS;
 
-public class charToString {
+public class Char_To_String {
     public static void main(String[] args) {
 
         String string1 = Character.toString('c');

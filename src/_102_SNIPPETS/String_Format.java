@@ -1,6 +1,6 @@
 package _102_SNIPPETS;
 
-public class stringFormat {
+public class String_Format {
     public static void main(String[] args) {
         int x = 7;
         System.out.printf("%04d",x);

@@ -1,13 +1,11 @@
 package _102_SNIPPETS;
 
-import java.util.Arrays;
-
-public class arrays {
+public class Arrays {
     public static void main(String[] args) {
         //Convert String to String Array
         String input = "Hello,World,OpenAI";
         String[] stringArray = input.split(",");
-        System.out.println(Arrays.toString(stringArray));
+        System.out.println(java.util.Arrays.toString(stringArray));
 
         // String to array
         String st = String.join(",", stringArray);
@@ -31,7 +29,7 @@ public class arrays {
         for(int i=0; i<size; i++) {
             arr[i] = Integer.parseInt(str[i]);
         }
-        String output= Arrays.toString(arr);
+        String output= java.util.Arrays.toString(arr);
         output=output.substring(1, output.length()-1);
         System.out.println(output);
 
