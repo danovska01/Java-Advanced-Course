@@ -1,6 +1,6 @@
 package N5_TEST_TASKS_IT;
 
-public class _1_Check_If_A_Number_Is_A_Cube {
+public class _S4_Check_If_A_Number_Is_A_Cube {
 
     //Write a method that checks if a given number is a cube. A number is a
     //cube when there exists another number which on power 3 gives the input number.

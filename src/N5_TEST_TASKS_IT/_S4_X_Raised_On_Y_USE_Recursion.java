@@ -1,6 +1,6 @@
 package N5_TEST_TASKS_IT;
 
-public class _1_X_Raised_On_Y_USE_Recursion {
+public class _S4_X_Raised_On_Y_USE_Recursion {
     //Write a method that calculates X Y using only addition. Use recursion!
     //Input: The integer X and Y.
     //Output: X on power Y, using only addition (+) and recursion.

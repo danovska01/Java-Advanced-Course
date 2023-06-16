@@ -1,6 +1,6 @@
 package N5_TEST_TASKS_IT;
 
-public class _1_Print_Rectangular_Frame {
+public class _S4_Print_Rectangular_Frame {
     //Write a method that takes an array of strings and prints them one per
     //line in a rectangular frame.
     //For example: The list {“Hello”, “World”, “in”, “a”, “frame”} gets printed as:

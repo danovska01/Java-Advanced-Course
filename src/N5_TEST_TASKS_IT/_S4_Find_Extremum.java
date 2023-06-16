@@ -1,6 +1,6 @@
 package N5_TEST_TASKS_IT;
 
-public class _1_Find_Extremum {
+public class _S4_Find_Extremum {
 
     // Напишете метод int findExtremum(int[] arr), която намира екстремума на масива
     //arr, който е или хълм или падина.

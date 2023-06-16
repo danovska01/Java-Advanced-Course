@@ -1,6 +1,6 @@
 package N5_TEST_TASKS_IT;
 
-public class _1_SNIPPET_1 {
+public class _S4_SNIPPET_1 {
     public static void main(String[] args) {
         //What will be the result of the following code?
 

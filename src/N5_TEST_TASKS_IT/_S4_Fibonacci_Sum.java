@@ -1,6 +1,6 @@
 package N5_TEST_TASKS_IT;
 
-public class _1_Fibonacci_Sum {
+public class _S4_Fibonacci_Sum {
     //Print all Fibonacci numbers less than N (first and second Fibonacci
     //numbers are 0 and 1) and their total sum.
     //Input: A positive integer number N not greater than 700 000

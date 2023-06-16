@@ -1,6 +1,6 @@
 package N5_TEST_TASKS_IT;
 
-public class _1_SNIPPET_2 {
+public class _S4_SNIPPET_2 {
     //How many times will the following loop iterate? - endless!!!!
 
     public static void main(String[] args) {
